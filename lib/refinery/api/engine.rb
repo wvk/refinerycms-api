@@ -11,18 +11,18 @@ module Refinery
       config.autoload_paths += %W( #{config.root}/lib )
 
       config.before_configuration do
-        ::Rabl.configure do |config|
-          config.include_json_root = false
-          config.include_child_root = false
+        ::Rabl.configure do |rabl_config|
+          rabl_config.include_json_root = false
+          rabl_config.include_child_root = false
 
           # Motivation here it make it call as_json when rendering timestamps
           # and therefore display miliseconds. Otherwise it would fall to
           # JSON.dump which doesn't display the miliseconds
-          config.json_engine = ActiveSupport::JSON
+          rabl_config.json_engine = ActiveSupport::JSON
         end
 
-        config.versioncake.supported_version_numbers = [1]
-        config.versioncake.extraction_strategy = :http_header
+#         config.versioncake.supported_version_numbers = [1]
+#         config.versioncake.extraction_strategy = :http_header
       end
 
       config.after_initialize do

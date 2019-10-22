@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.version       = %q{1.0.0.beta}
 
-  s.add_dependency 'refinerycms-core',  ['~> 3.0', '>= 3.0.0']
-  s.add_dependency 'cancancan', '~> 1.10.1'
-  s.add_dependency 'decorators', '~> 2.0'
-  s.add_dependency 'rabl', '~> 0.12.0'
-  s.add_dependency 'versioncake', '~> 2.3.1'
+  s.add_dependency 'refinerycms-core',  ['>= 3.0.0']
+  s.add_dependency 'cancancan'#, '~> 1.10.1'
+  s.add_dependency 'decorators'#, '~> 2.0'
+  s.add_dependency 'rabl'#, '~> 0.12.0'
+  s.add_dependency 'versioncake', '~> 3.3'
   s.add_dependency 'responders'
 end
